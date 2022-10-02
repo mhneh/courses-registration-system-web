@@ -111,7 +111,7 @@ form .form-line {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .form-line .form-label {
@@ -123,6 +123,15 @@ form .form-line {
     width: 70%;
     margin-left: 10px;
     padding: 4px;
+}
+
+.error {
+    flex: 1;
+    color: red;
+    margin-bottom: 12px;
+    font-size: 0.8em;
+    margin-top: -10px;
+    margin-left: 14px;
 }
 
 .form-line .form-radio-group {
@@ -183,6 +192,11 @@ form .form-line {
     background-color: #fffa90;
     border: 1px solid #FFB12F;
     cursor: grab;
+}
+
+.course-list .selected {
+    background-color: #FF8206 !important;
+    color: #FFE2B1 !important;
 }
 
 .course-container .actions {

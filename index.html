@@ -37,36 +37,49 @@
                         <label class="form-label">Ma so: </label>
                         <input class="form-input" type="text" name="id">
                     </div>
+                    <p class="error"></p>
+
                     <div class="form-line">
                         <label class="form-label">Ho va ten: </label>
                         <input class="form-input" type="text" name="name">
                     </div>
+                    <p class="error"></p>
+
                     <div class="form-line">
                         <label class="form-label">Dia chi: </label>
                         <input class="form-input" type="text" name="address">
                     </div>
+                    <p class="error"></p>
+
                     <div class="form-line">
                         <label class="form-label">Dien thoai: </label>
                         <input class="form-input" type="text" name="phone">
                     </div>
+                    <p class="error"></p>
+
                     <div class="form-line">
                         <label class="form-label">Gioi tinh: </label>
                         <div class="form-radio-group">
-                            <input class="form-radio" name="sex" type="radio">
+                            <input class="form-radio" name="sex" type="radio" value="male" checked>
                             <label>Nam</label>
-                            <input class="form-radio" name="sex" type="radio">
+                            <input class="form-radio" name="sex" type="radio" value="female">
                             <label>Nu</label>
                         </div>
 
                     </div>
+                    <p class="error"></p>
+
                     <div class="form-line">
                         <label class="form-label">Ngay sinh: </label>
-                        <input type="date" class="form-input" name="birthdate">
+                        <input type="date" class="form-input" name="birthdate" required>
                     </div>
+                    <p class="error"></p>
+
                     <div class="form-line">
                         <label class="form-label">Email: </label>
-                        <input type="email" class="form-input">
+                        <input type="email" class="form-input" name="email">
                     </div>
+                    <p class="error"></p>
                 </form>
             </div>
 
@@ -86,10 +99,10 @@
                 </div>
 
                 <div class="actions">
-                    <button class="action">></button>
-                    <button class="action">>></button>
-                    <button class="action"><</button>
-                    <button class="action"><<</button>
+                    <button class="action" id="register">></button>
+                    <button class="action" id="register-all">>></button>
+                    <button class="action" id="unregister"><</button>
+                    <button class="action" id="unregister-all"><<</button>
                 </div>
 
                 <div class="courses" >
@@ -104,12 +117,12 @@
             </div>
 
             <div class="operations">
-                <button id="register">Dang ky</button>
-                <button id="reset">Xoa het</button>
+                <button id="register-btn">Dang ky</button>
+                <button id="reset-btn">Xoa het</button>
             </div>
 
             <div class="student-list">
-                <table>
+                <table id="students">
                     <tr>
                         <th>Ma so</th>
                         <th>Ho va Ten</th>
@@ -148,7 +161,7 @@
             <div class="news selected">
                 <div class="news-header">
                     <img src="icons/arrow-down.png"/>
-                    <img src="./icons/icons8-direction-64.png">
+                    <img src="./icons/icons8-direction-64.png" style="width: 16px;">
                     NEWS 01
                 </div>
                 <div class="news-content">
@@ -181,7 +194,7 @@
             <div class="news">
                 <div class="news-header">
                     <img src="icons/sort-right.png"/>
-                    <img src="./icons/resize-horizontal.png">
+                    <img src="./icons/resize-vertical.png">
                     NEWS 02
                 </div>
                 <div class="news-content close">
@@ -202,7 +215,7 @@
             <div class="news selected">
                 <div class="news-header">
                     <img src="icons/arrow-down.png"/>
-                    <img src="./icons/icons8-direction-64.png">
+                    <img src="./icons/icons8-direction-64.png" style="width: 16px;">
                     NEWS 03
                 </div>
                 <div class="news-content">
@@ -235,7 +248,7 @@
             <div class="news">
                 <div class="news-header">
                     <img src="icons/sort-right.png"/>
-                    <img src="./icons/resize-horizontal.png">
+                    <img src="./icons/resize-vertical.png">
                     NEWS 04
                 </div>
                 <div class="news-content close">
