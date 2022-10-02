@@ -148,6 +148,7 @@ form .form-line {
     width: 45%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .courses .title {
@@ -165,19 +166,23 @@ form .form-line {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    height: 330px;
+    height: 100%;
 }
 
-.course-list .course {
+#courses-unregister .course {
     padding: 5px 10px;
     background-color: #f6f6f6;
     margin: 5px;
     border: 1px solid #b1aeab;
+    cursor: grab;
 }
 
-.course-list .course-registered {
+#courses-registered .course {
+    margin: 5px;
+    padding: 5px 10px;
     background-color: #fffa90;
     border: 1px solid #FFB12F;
+    cursor: grab;
 }
 
 .course-container .actions {

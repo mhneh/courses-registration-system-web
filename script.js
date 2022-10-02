@@ -2,39 +2,13 @@ $(document).ready(function () {
 
     $(function () {
 
-        const newsContainer = $(".news");
+        $("#news-container").sortable({
+            helper: "clone",
+            axis: "y",
+            cursor: "grabbing"
+        });
 
-        // newsContainer.draggable({
-        //     axis: "y",
-        //     containment: "body"
-        // });
-
-        $("#news-container").sortable();
-
-        // $("#news-container").droppable({
-        //     accept: ".news",
-        //     class: {
-        //         "ui-droppable-active":"ac",
-        //         "ui-droppable-hover":"hv"
-        //     },
-        //     acivate: function( event, ui ) {
-        //         $(this).css('background','red');
-        //     },
-        //     over: function( event, ui ) {
-        //         $(this).css('background',"yellow");
-        //     },
-        //     out: function( event, ui ) {
-        //         $(this).css('background','blue');
-        //     },
-        //     drop: function( event, ui ) {
-        //         $(this).css('background','white');
-        //     },
-        //     deactivate: function( event, ui ) {
-        //         $(ui.item).css('background','green');
-        //     },
-        // });
-
-        newsContainer.click(function (event) {
+        $(".news").click(function (event) {
             const header = $(event.target);
 
             const container = header.parent();
@@ -52,8 +26,36 @@ $(document).ready(function () {
             const content = header.next();
             content.toggleClass("close");
         });
-    })
+    });
 
+    $("#form-register").submit(function (event) {
+        event.preventDefault();
+        console.log("HH");
 
+        const form = $(event.target);
+        console.log(form.data("id"));
+        console.log(form.data("name"));
+    });
 
+    $("#register").click(function (event) {
+        console.log("Register");
+        $("#form-register").submit();
+    });
+
+    $("#reset").click(function (event) {
+        console.log("Reset");
+        $("#form-register").trigger("reset");
+    });
+
+    $("#courses-unregister").sortable({
+        helper: "clone",
+        cursor: "grabbing",
+        connectWith: "#courses-registered"
+    });
+
+    $("#courses-registered").sortable({
+        helper: "clone",
+        cursor: "grabbing",
+        connectWith: "#courses-unregister"
+    });
 })

@@ -32,22 +32,22 @@
             <h3 class="title">DANG KY HOC PHAN</h3>
 
             <div class="form-container">
-                <form>
+                <form id="form-register">
                     <div class="form-line">
                         <label class="form-label">Ma so: </label>
-                        <input class="form-input" type="text">
+                        <input class="form-input" type="text" name="id">
                     </div>
                     <div class="form-line">
                         <label class="form-label">Ho va ten: </label>
-                        <input class="form-input" type="text">
+                        <input class="form-input" type="text" name="name">
                     </div>
                     <div class="form-line">
                         <label class="form-label">Dia chi: </label>
-                        <input class="form-input" type="text">
+                        <input class="form-input" type="text" name="address">
                     </div>
                     <div class="form-line">
                         <label class="form-label">Dien thoai: </label>
-                        <input class="form-input" type="text">
+                        <input class="form-input" type="text" name="phone">
                     </div>
                     <div class="form-line">
                         <label class="form-label">Gioi tinh: </label>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="form-line">
                         <label class="form-label">Ngay sinh: </label>
-                        <input type="date" class="form-input">
+                        <input type="date" class="form-input" name="birthdate">
                     </div>
                     <div class="form-line">
                         <label class="form-label">Email: </label>
@@ -71,10 +71,10 @@
             </div>
 
             <div class="course-container">
-                <div class="courses">
+                <div class="courses" >
                     <h4 class="title text-right">Cac mon hoc</h4>
 
-                    <div class="course-list">
+                    <div class="course-list" id="courses-unregister">
                         <div class="course">Lap Trinh Huong Doi Tuong</div>
                         <div class="course">Cau Truc Du Lieu</div>
                         <div class="course">Lap Trinh Windows</div>
@@ -92,13 +92,13 @@
                     <button class="action"><<</button>
                 </div>
 
-                <div class="courses">
+                <div class="courses" >
                     <h4 class="title">Cac mon da chon</h4>
 
-                    <div class="course-list">
-                        <div class="course course-registered">Nhap Mon Lap Trinh</div>
-                        <div class="course course-registered">Ky Thuat Lap Trinh</div>
-                        <div class="course course-registered">Lap Trinh Ung Dung Java</div>
+                    <div class="course-list" id="courses-registered">
+                        <div class="course">Nhap Mon Lap Trinh</div>
+                        <div class="course">Ky Thuat Lap Trinh</div>
+                        <div class="course">Lap Trinh Ung Dung Java</div>
                     </div>
                 </div>
             </div>
