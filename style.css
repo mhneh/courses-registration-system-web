@@ -361,6 +361,40 @@ footer .footer-container {
     color: #FFE2B1;
 }
 
+@media screen and (max-width: 720px) {
+    nav ul {
+        width: 70%;
+    }
+
+    footer .footer-container {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    nav ul li {
+        font-size: 0.8em;
+    }
+
+    footer .footer-container {
+        font-size: 0.6em;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 
 

@@ -61,7 +61,7 @@ $(document).ready(function () {
 
         let registeredCourses = "";
         $("#courses-registered").children().each((id, course) => {
-            registeredCourses.concat(id + 1 + ". " + course.innerText + "\n");
+            registeredCourses += (id + 1 + ". " + course.innerText + "\n");
         });
 
         alert(registeredCourses);
