@@ -77,23 +77,23 @@ $(document).ready(function () {
         const errorIdField = idField.parent().next();
         if (!id) {
             idField.css({"border": "1px solid red", "color": "red"});
-            errorIdField.append("<br/>Vui long nhap ma so.");
+            errorIdField.append("<br/>Vui lòng nhập mã số.");
             error = true;
         }
         if (isNaN(id)) {
             idField.css({"border": "1px solid red", "color": "red"});
-            errorIdField.append("<br/>Ma so chi bao gom ky so.");
+            errorIdField.append("<br/>Mã số chỉ bao gồm ký số.");
             error = true;
         }
         if (id.length !== 8) {
             idField.css({"border": "1px solid red", "color": "red"});
-            errorIdField.append("<br/>Ma so chi gom 8 ky so.");
+            errorIdField.append("<br/>Mã số chỉ gồm 8 ký số.");
             error = true;
         }
         const prefixId = parseInt(id.slice(0, 2));
         if (16 > prefixId || prefixId > 22) {
             idField.css({"border": "1px solid red", "color": "red"});
-            errorIdField.append("<br/>2 ky so dau chi tu 17 -> 22.");
+            errorIdField.append("<br/>2 ký số đầu chỉ từ 17 -> 22.");
             error = true;
         }
 
@@ -102,7 +102,7 @@ $(document).ready(function () {
         const errorNameField = nameField.parent().next();
         if (name.split(" ").length < 2) {
             nameField.css({"border": "1px solid red", "color": "red"});
-            errorNameField.append("<br/>Ho va Ten co it nhat 2 ki tu.");
+            errorNameField.append("<br/>Họ và tên phải có ít nhất 2 kí tự.");
             error = true;
         }
 
@@ -111,7 +111,7 @@ $(document).ready(function () {
         const errorAddressField = addressField.parent().next();
         if (address.split(" ").length < 2) {
             addressField.css({"border": "1px solid red", "color": "red"});
-            errorAddressField.append("<br/>Dia chi co it nhat 2 ki tu.");
+            errorAddressField.append("<br/>Địa chỉ phải có ít nhất 2 ký tự.");
             error = true;
         }
 
@@ -120,7 +120,7 @@ $(document).ready(function () {
         const errorPhoneAddress = phoneField.parent().next();
         if (!phone.match(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/g)) {
             phoneField.css({"border": "1px solid red", "color": "red"});
-            errorPhoneAddress.append("<br/>SDT yeu cau 10 ky so bat dau boi 0.");
+            errorPhoneAddress.append("<br/>SĐT yêu cầu 10 ký số, bắt đầu bởi số 0.");
             error = true;
         }
 
@@ -129,7 +129,7 @@ $(document).ready(function () {
         const emailErrorField = emailField.parent().next();
         if (!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
             emailField.css({"border": "1px solid red", "color": "red"});
-            emailErrorField.append("<br/>Vui long nhap email hop le.");
+            emailErrorField.append("<br/>Vui lòng nhập email hợp lệ.");
             error = true;
         }
 
